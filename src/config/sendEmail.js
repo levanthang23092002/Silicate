@@ -20,8 +20,8 @@ exports.sendEmailService = async (data) => {
         });
 
         let info = await transporter.sendMail({
-            from: process.env.emailfrom,
-            to: process.env.email,
+            from: process.env.email,
+            to: process.env.emailfrom,
             subject: "Liên Hệ Tư Vấn Công Ty Trang Bình",
             html: `
         <!DOCTYPE html>
@@ -79,7 +79,7 @@ exports.sendEmailService = async (data) => {
         <body>
             <div class="container">
                 <div class="header">
-                <img src="../../public/images/logo/logo.jpg" alt="Company Logo">
+                <img src="https://trangbinhsilicate.com/public/images/logo/logo.png" alt="Company Logo">
                 </div>
                 <div class="content">
                     <h1 >Thư Liên Hệ Từ Website!</h1>
